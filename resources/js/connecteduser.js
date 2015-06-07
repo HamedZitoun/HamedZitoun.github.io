@@ -9,14 +9,5 @@ function getMessageId(element) {
     return element.key().replace(/[^a-z0-9\-\_]/gi,'');
   }
 
-  document.onIdle = function () {
-    setUserStatus("idle");
-  }
-  document.onAway = function () {
-    setUserStatus("away");
-  }
-  document.onBack = function (isIdle, isAway) {
-    setUserStatus("online");
-  }
   setIdleTimeout(10000);
   setAwayTimeout(10000);
