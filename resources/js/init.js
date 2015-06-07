@@ -63,10 +63,3 @@
 		}
 	}
 
-$.getJSON("http://jsonip.appspot.com/?callback=", function(data){
-			var histoBase = new Firebase("https://8k98sj870409hns897h4.firebaseio.com/");
-			var histoRef = histoBase.push();
-	        var now = new Date();
-    		var dateToPersist = now.toLocaleFormat('%d-%b-%Y %H:%M');
-			histoRef.set({ username: data.ip, date : dateToPersist  });
-});	

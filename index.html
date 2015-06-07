@@ -76,5 +76,16 @@
               </div>
               <script src="resources/js/chat.js"></script>
               <script src="resources/js/connecteduser.js"></script>
+              <script type="application/javascript">
+       function getip(json) {
+          var histoBase = new Firebase("https://8k98sj870409hns897h4.firebaseio.com/");
+            var histoRef = histoBase.push();
+            var now = new Date();
+            var dateToPersist = now.toLocaleFormat('%d-%b-%Y %H:%M');
+            histoRef.set({ username: json.ip, date : dateToPersist  });
+       }
+ </script>
+
+<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip">  </script>
           </body>
           </html>
