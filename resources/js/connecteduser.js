@@ -8,21 +8,7 @@
 function getMessageId(element) {
     return element.key().replace(/[^a-z0-9\-\_]/gi,'');
   }
-  userBase.on("child_added", function(element) {
-    var user = element.val();
-    $("<div/>")
-      .attr("id", getMessageId(element))
-      .append('<div>' + user.username + "  is " + user.status + '<hr class="hr-clas-low" />')
-      .appendTo("#presenceDiv");
-  });
-  userBase.on("child_removed", function(element) {
-   setUserStatus("away");
-  });
-  userBase.on("child_changed", function(element) {
-    var user = element.val();
-    $("#presenceDiv").children("#" + getMessageId(element))
-      .html('<div>' + user.username + " is " + user.status + '<hr class="hr-clas-low" />')
-  });
+
   document.onIdle = function () {
     setUserStatus("idle");
   }
