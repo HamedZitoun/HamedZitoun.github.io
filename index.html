@@ -1,4 +1,4 @@
-﻿    <html>
+    <html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -6,7 +6,6 @@
         <meta name="author" content="Hamed ZITOUN(zitoun.hamed@gmail.com)" />
         <title>FireBase Chat Group</title>
         <link href="resources/css/bootstrap.css" rel="stylesheet" />
-        <link href="resources/css/font-awesome.css" rel="stylesheet" />
         <link href="resources/css/style.css" rel="stylesheet" />
         <script src="resources/js/jquery-1.11.1.js"></script>
         <script src="resources/js/bootstrap.js"></script>
@@ -39,10 +38,10 @@
                                     Group Chat      
                                 </div>
                                 <div id="messagesDiv" class="panel-body chat-box-main">
-                                   <!-- messages will be loaded here /-->
-                               </div>
-                               <!-- send div /-->
-                               <div class="chat-box-footer">
+                                 <!-- messages will be loaded here /-->
+                             </div>
+                             <!-- send div /-->
+                             <div class="chat-box-footer">
                                 <div class="input-group">
                                     <input id="messageInput" type="text" class="form-control" placeholder="your message..." disabled>
                                     <span class="input-group-btn">
@@ -66,26 +65,14 @@
                     <div class="col-lg-3 col-md-3 col-sm-3">
                         <div>
                           <p>Free Online Chat Group made by Hamed ZITOUN</p>
-                          2015
-                          <a href="mailto:zitoun.hamed@gmail.com">
-                              <p>Don't hesitate to contact me</a>.</p>
-                              <p></p>
-                          </div> 
-                      </div>
+                          2015. Don't hesitate to <a href="mailto:zitoun.hamed@gmail.com">
+                          <p> contact me</a>.</p>
+                          <p></p>
+                      </div> 
                   </div>
               </div>
-              <script src="resources/js/chat.js"></script>
-              <script src="resources/js/connecteduser.js"></script>
-              <script type="application/javascript">
-       function getip(json) {
-          var histoBase = new Firebase("https://8k98sj870409hns897h4.firebaseio.com/");
-            var histoRef = histoBase.push();
-            var now = new Date();
-            var dateToPersist = now.toLocaleFormat('%d-%b-%Y %H:%M');
-            histoRef.set({ username: json.ip, date : dateToPersist  });
-       }
- </script>
-
-<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip">  </script>
-          </body>
-          </html>
+          </div>
+          <script src="resources/js/chat.js"></script>
+          <script src="resources/js/connecteduser.js"></script>
+      </body>
+      </html>
