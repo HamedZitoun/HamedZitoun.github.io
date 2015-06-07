@@ -16,7 +16,7 @@ connectedRef.on("value", function(isOnline) {
     setUserStatus("online");
   }
   else {
-    setUserStatus(currentStatus);
+    setUserStatus("away");
   }
 });
 function setUserStatus(status) {
