@@ -16,8 +16,7 @@ function getMessageId(element) {
       .appendTo("#presenceDiv");
   });
   userBase.on("child_removed", function(element) {
-    $("#presenceDiv").children("#" + getMessageId(element))
-      .remove();
+   setUserStatus("away");
   });
   userBase.on("child_changed", function(element) {
     var user = element.val();
