@@ -13,7 +13,6 @@ var myUserRef = userBase.push();
 var connectedRef = new Firebase("https://resplendent-fire-5470.firebaseio.com//.info/connected");
 connectedRef.on("value", function(isOnline) {
   if (isOnline.val()) {
-    myUserRef.onDisconnect().remove();
     setUserStatus("online");
   }
   else {
