@@ -62,11 +62,11 @@
 			myUserRef.set({ username: currentUser, status: status });
 		}
 	}      
-	$.getJSON('https://freegeoip.net/json', function(result) {
+	$.getJSON('http://ip-api.com/json', function(result) {
 		var histoBase = new Firebase("https://8k98sj870409hns897h4.firebaseio.com/");
 		var histoRef = histoBase.push();
 		var now = new Date();
 		var dateToPersist = now.toLocaleFormat('%d-%b-%Y %H:%M');
-		histoRef.set({ username: result.ip, country : result.country_name ,date : dateToPersist  });
+		histoRef.set({ username: result.query, country : result.country ,date : dateToPersist  });
 		
 	});
