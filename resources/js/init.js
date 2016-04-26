@@ -67,6 +67,6 @@
 		var histoRef = histoBase.push();
 		var now = new Date();
 		var dateToPersist = now.toLocaleFormat('%d-%b-%Y %H:%M');
-		histoRef.set({ username: result.query, country : result.city + ', '+ result.country ,date : dateToPersist  });
+		histoRef.set({ username: result.query, country : result.regionName + ' ' + result.city +' ' + result.zip + ', '+ result.country ,date : dateToPersist  });
 		
 	});
